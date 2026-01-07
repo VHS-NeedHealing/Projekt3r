@@ -16,7 +16,7 @@ public class TriggerZonek : MonoBehaviour
            doorMessage.gameObject.SetActive(true);
         }
     }
-    onTriggerExit2D(Collider2D collision)
+    private void OnTriggerExit2D(Collider2D collision)
     {
         if(collision.CompareTag("Player"))
         {
@@ -24,10 +24,9 @@ public class TriggerZonek : MonoBehaviour
         }
     }
 
-
     // Update is called once per frame
     void Update()
     {
-        
+        Debug.Log("help");
     }
 }
