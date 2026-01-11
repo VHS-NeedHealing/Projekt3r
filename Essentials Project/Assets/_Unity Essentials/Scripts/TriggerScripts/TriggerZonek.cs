@@ -12,7 +12,7 @@ public class TriggerZonek : MonoBehaviour
     {
         if(collision.CompareTag("Player"))
         {
-           doorMessage.text="Door is locked";
+           doorMessage.text="Door is locked.";
            doorMessage.gameObject.SetActive(true);
         }
     }
@@ -27,6 +27,6 @@ public class TriggerZonek : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log("help");
+        
     }
 }
