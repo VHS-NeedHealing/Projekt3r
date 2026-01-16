@@ -1,16 +1,16 @@
 using UnityEngine;
+using UnityEngine.Audio;
 
-public class UIscript : MonoBehaviour
+public class TriggerSFX : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+   public AudioSource audioSource;
+   private void OnTriggerEnter2D(Collider2D collison)
     {
-        
+        if(collison.CompareTag("Player"))
+        {
+        audioSource.Play();
+        }
+        Debug.Log("Trigger SFX played");
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    
 }

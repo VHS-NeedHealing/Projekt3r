@@ -22,9 +22,4 @@ public class Trigger2mm : MonoBehaviour
            hasRun = true;
         }
      }
-    
-    void Update()
-    {
-        Debug.Log("hell");
-    }
 }

@@ -23,8 +23,4 @@ public class TriggerSlipperS : MonoBehaviour
         }
      }
     
-    void Update()
-    {
-        Debug.Log("hell");
-    }
 }
