@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Trigger01 : MonoBehaviour
+public class TriggerCat01 : MonoBehaviour
 {
     public TMPro.TextMeshProUGUI catMessage;
     //zmienna
@@ -10,7 +10,7 @@ public class Trigger01 : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            catMessage.text = "Use WSAD to move";
+            catMessage.text = "MEOW";
             catMessage.gameObject.SetActive(true);
         }
     }
@@ -19,12 +19,12 @@ public class Trigger01 : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             catMessage.gameObject.SetActive(false);
-            
+     
         }
     }
 
     void Update()
     {
-        Debug.Log("Tutorial popup");
+        Debug.Log("Cat meows");
     }
 }
