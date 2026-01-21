@@ -6,6 +6,15 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/_Unity Essentials/Scenes/0_MainMenu_Scene.unity
+    guid: 0eac1eecd2187407c9da8013ae9797da
+  - enabled: 1
+    path: Assets/_Unity Essentials/Scenes/Paulina_scene.unity
+    guid: 4041ec3bddf13c2408ff29ec215cd73e
+  - enabled: 1
+    path: Assets/_Unity Essentials/Scenes/Wiktoria_scene.unity
+    guid: 500ad38d17d44ed46ad32e928fb8b2b1
+  - enabled: 1
     path: Assets/_Unity Essentials/Scenes/Hania_scene.unity
     guid: 91ecc6b5f6cf1304b927054c1adb8b0c
   m_configObjects: {}

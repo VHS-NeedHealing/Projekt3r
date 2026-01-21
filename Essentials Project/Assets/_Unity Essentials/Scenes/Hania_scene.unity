@@ -261,6 +261,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8116058387275963488, guid: 11df39673429a452dbbcbc5da55020d6,
         type: 3}
+      propertyPath: m_PixelPerfect
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8116058387275963488, guid: 11df39673429a452dbbcbc5da55020d6,
+        type: 3}
       propertyPath: m_AdditionalShaderChannelsFlag
       value: 25
       objectReference: {fileID: 0}
@@ -871,7 +876,7 @@ Canvas:
   m_RenderMode: 0
   m_Camera: {fileID: 0}
   m_PlaneDistance: 100
-  m_PixelPerfect: 0
+  m_PixelPerfect: 1
   m_ReceivesEvents: 1
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
@@ -1296,6 +1301,7 @@ GameObject:
   - component: {fileID: 385256224}
   - component: {fileID: 385256226}
   - component: {fileID: 385256225}
+  - component: {fileID: 385256227}
   m_Layer: 5
   m_Name: SlippersMessageText
   m_TagString: Untagged
@@ -1319,7 +1325,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 181.75037, y: 228}
+  m_AnchoredPosition: {x: 160, y: 100}
   m_SizeDelta: {x: 418.4279, y: 164.72}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &385256225
@@ -1369,8 +1375,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 48
-  m_fontSizeBase: 48
+  m_fontSize: 24
+  m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -1421,6 +1427,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 385256223}
   m_CullTransparentMesh: 1
+--- !u!114 &385256227
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 385256223}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5688eb8076c74d4ba33e0a61a4ac00b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TriggerSlipperS
+  slipperSMessage: {fileID: 385256225}
 --- !u!4 &425456691 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 326743505800490892, guid: 57a8a3a7dcc4149d1a10f3dc04258aca,
@@ -5729,6 +5748,7 @@ GameObject:
   - component: {fileID: 1588366180}
   - component: {fileID: 1588366182}
   - component: {fileID: 1588366181}
+  - component: {fileID: 1588366183}
   m_Layer: 5
   m_Name: catMessageText
   m_TagString: Untagged
@@ -5752,7 +5772,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 190, y: -231}
+  m_AnchoredPosition: {x: 123, y: -76}
   m_SizeDelta: {x: 283.8024, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1588366181
@@ -5802,8 +5822,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 48
-  m_fontSizeBase: 48
+  m_fontSize: 24
+  m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -5854,6 +5874,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1588366179}
   m_CullTransparentMesh: 1
+--- !u!114 &1588366183
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1588366179}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea359272a3928244ba6a56376eb85c4f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Trigger2mm
+  catMessage: {fileID: 1588366181}
 --- !u!1001 &1598092609
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6313,6 +6346,7 @@ GameObject:
   - component: {fileID: 1745097343}
   - component: {fileID: 1745097342}
   - component: {fileID: 1745097346}
+  - component: {fileID: 1745097347}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -6334,6 +6368,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PlayerController2D
   speed: 5
   canMoveDiagonally: 1
+  animator: {fileID: 1745097347}
 --- !u!50 &1745097343
 Rigidbody2D:
   serializedVersion: 5
@@ -6408,7 +6443,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: b0b81f769a0754b0b809d0e9d54a6673, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 72de0c64f2c6a498096698322c976a67, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -6428,8 +6463,8 @@ Transform:
   m_GameObject: {fileID: 1745097341}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.35, y: 3.33, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -7, y: 3.61, z: 0}
+  m_LocalScale: {x: 0.6, y: 0.6, z: 0.6}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -6468,8 +6503,30 @@ CircleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
-  m_Radius: 0.64107144
+  m_Offset: {x: 0, y: -0.5}
+  m_Radius: 1
+--- !u!95 &1745097347
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1745097341}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 78a4d6c4dfa170a489f71670be96e2fd, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1001 &1746272981
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7165,6 +7222,7 @@ GameObject:
   - component: {fileID: 1924359307}
   - component: {fileID: 1924359309}
   - component: {fileID: 1924359308}
+  - component: {fileID: 1924359310}
   m_Layer: 5
   m_Name: DoorMessageText
   m_TagString: Untagged
@@ -7238,8 +7296,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 48
-  m_fontSizeBase: 48
+  m_fontSize: 24
+  m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -7290,6 +7348,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1924359306}
   m_CullTransparentMesh: 1
+--- !u!114 &1924359310
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1924359306}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dddcd65ce508f7b46bc321c828303989, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TriggerZonek
+  doorMessage: {fileID: 1924359308}
 --- !u!1001 &1933521538
 PrefabInstance:
   m_ObjectHideFlags: 0
