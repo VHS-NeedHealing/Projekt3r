@@ -1905,6 +1905,7 @@ GameObject:
   - component: {fileID: 702289028}
   - component: {fileID: 702289032}
   - component: {fileID: 702289031}
+  - component: {fileID: 702289037}
   m_Layer: 0
   m_Name: Sprite Sheet_Cat_0
   m_TagString: Untagged
@@ -2070,6 +2071,18 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
   m_Radius: 0.51
+--- !u!114 &702289037
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 702289027}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6274d3a25562a44aa6af8fb4538477a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::trigger
 --- !u!1001 &728204954
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4186,6 +4199,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1498493608}
   - component: {fileID: 1498493607}
+  - component: {fileID: 1498493609}
   m_Layer: 0
   m_Name: TriggerZone
   m_TagString: Untagged
@@ -4248,12 +4262,24 @@ Transform:
   m_GameObject: {fileID: 1498493606}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.95, y: 0.56854, z: -4.89}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 6.95, y: 1, z: 10.75}
+  m_LocalScale: {x: 154.69695, y: 154.69695, z: 154.69695}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1498493609
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1498493606}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cea059ad23866904b9c8caa10a861e33, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::trigger
 --- !u!1001 &1522904188
 PrefabInstance:
   m_ObjectHideFlags: 0
