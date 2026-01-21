@@ -9,24 +9,34 @@ public class Menucontroller : MonoBehaviour
     private bool SFXMuted = false;
     public GameObject menu;
     private bool isMenuActive = false;
-   // Scene.name;
+    Scene scene;
 
         private void Start()
     {
-        //scene = SceneManager.GetActiveScene();
+        scene = SceneManager.GetActiveScene();
     }
 
     private void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Escape))// Scene.name == "Hania_scene"
+        if(Input.GetKeyDown(KeyCode.P) && scene.name == "Hania_scene")
         {
             isMenuActive = !isMenuActive;
             menu.SetActive(isMenuActive);
         }
     }
-    public void Restart()
+    public void RestartHania()
     {
         SceneManager.LoadScene("Hania_scene");
+        Debug.Log("restarted");
+    }
+    public void RestartPaulina()
+    {
+        SceneManager.LoadScene("Paulina_scene");
+        Debug.Log("restarted");
+    }
+    public void RestartWiktoria()
+    {
+        SceneManager.LoadScene("Wiktoria_scene");
         Debug.Log("restarted");
     }
     public void QuitGame()
