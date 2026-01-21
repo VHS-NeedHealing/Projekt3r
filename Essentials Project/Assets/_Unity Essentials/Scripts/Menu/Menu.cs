@@ -8,21 +8,40 @@ public class Menu : MonoBehaviour
     private bool musicMuted = false;
     private bool sfxMuted = false;
     public GameObject menu;
+    private bool ismenuActive = false;
+    Scene scene;
 
-    private bool menuActive = false; 
+    private void Start()
+    {
+        scene = SceneManager.GetActiveScene();
+    }
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKeyDown(KeyCode.P) && scene.name == "Hania_scene")
         {
-            menuActive = !menuActive;
-            menu.SetActive(true);
+            ismenuActive = !ismenuActive;
+            menu.SetActive(ismenuActive);
         }
     }
-    public void Restart()
+    public void RestartWiktoria()
     {
-        SceneManager.LoadScene("Wiktoria_Scene");
+        SceneManager.LoadScene("Wiktoria_scene");
+        Debug.Log("restarted");
     }
+
+    public void RestartHania()
+    {
+        SceneManager.LoadScene("Hania_scene");
+        Debug.Log("restarted");
+    }
+
+    public void RestartPaulina()
+    {
+        SceneManager.LoadScene("Paulina_scene");
+        Debug.Log("restarted");
+    }
+
 
     public void QuitGame()
     {
