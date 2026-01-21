@@ -4,6 +4,9 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/_Unity Essentials/Scenes/Hania_scene.unity
+    guid: 91ecc6b5f6cf1304b927054c1adb8b0c
   m_configObjects: {}
   m_UseUCBPForAssetBundles: 0

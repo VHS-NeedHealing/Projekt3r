@@ -9,10 +9,16 @@ public class Menucontroller : MonoBehaviour
     private bool SFXMuted = false;
     public GameObject menu;
     private bool isMenuActive = false;
-    
+   // Scene.name;
+
+        private void Start()
+    {
+        //scene = SceneManager.GetActiveScene();
+    }
+
     private void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Escape))
+        if(Input.GetKeyDown(KeyCode.Escape))// Scene.name == "Hania_scene"
         {
             isMenuActive = !isMenuActive;
             menu.SetActive(isMenuActive);
@@ -21,6 +27,7 @@ public class Menucontroller : MonoBehaviour
     public void Restart()
     {
         SceneManager.LoadScene("Hania_scene");
+        Debug.Log("restarted");
     }
     public void QuitGame()
     {
@@ -32,6 +39,7 @@ public class Menucontroller : MonoBehaviour
         if (musicMuted)
         {
             audioMixer.SetFloat("MusicVolume", -80f);
+            Debug.Log("mute_music");
         }
         else
         {
