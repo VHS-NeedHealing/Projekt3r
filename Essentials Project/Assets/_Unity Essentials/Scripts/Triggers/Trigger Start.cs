@@ -1,8 +1,8 @@
 using UnityEngine;
 
-public class TrigerrMessage : MonoBehaviour
+public class TrigerrStartMessage : MonoBehaviour
 {
-    public TMPro.TextMeshProUGUI doorMessage;
+    public TMPro.TextMeshProUGUI StartMessage;
     //zmienna
     void Start()
     {
@@ -12,15 +12,15 @@ public class TrigerrMessage : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            doorMessage.text = "oh, that door has been closed";
-            doorMessage.gameObject.SetActive(true);
+            StartMessage.text = "What a mess!!";
+            StartMessage.gameObject.SetActive(true);
         }
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
         if (collision.CompareTag("Player"))
         {
-            doorMessage.gameObject.SetActive(false);
+            StartMessage.gameObject.SetActive(false);
         }
     }
 

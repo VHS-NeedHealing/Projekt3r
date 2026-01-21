@@ -10,6 +10,8 @@ public class Menu : MonoBehaviour
     public GameObject menu;
     private bool ismenuActive = false;
     Scene scene;
+    
+
 
     private void Start()
     {
@@ -18,7 +20,7 @@ public class Menu : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.P) && scene.name == "Hania_scene")
+        if (Input.GetKeyDown(KeyCode.P) && scene.name == "Wiktoria_scene")
         {
             ismenuActive = !ismenuActive;
             menu.SetActive(ismenuActive);
@@ -42,7 +44,6 @@ public class Menu : MonoBehaviour
         Debug.Log("restarted");
     }
 
-
     public void QuitGame()
     {
         Application.Quit();
@@ -54,40 +55,37 @@ public class Menu : MonoBehaviour
         if (musicMuted)
         {
             audioMixer.SetFloat("MusicVolume", -80f);
-
         }
         else
         {
             audioMixer.SetFloat("MusicVolume", 0f);
         }
     }
+
     public void ButtonSFXMute()
     {
         sfxMuted = !sfxMuted;
         if (sfxMuted)
         {
             audioMixer.SetFloat("SFXVolume", -80f);
-
         }
         else
         {
             audioMixer.SetFloat("SFXVolume", 0f);
-
         }
     }
 
-    public void SetMusicVolume(float sliderVolue)
+    public void SetMusicVolume(float sliderVolume)
     {
-        float db = Mathf.Lerp(-80f, 20, sliderVolue);
+        float db = Mathf.Lerp(-80f, 20f, sliderVolume);
         audioMixer.SetFloat("MusicVolume", db);
     }
 
-    public void SetSFXVolume(float sliderVolue)
+    public void SetSFXVolume(float sliderVolume)
     {
-        float db = Mathf.Lerp(-80f, 20, sliderVolue);
-        audioMixer.SetFloat("SFXVolume", db );
+        float db = Mathf.Lerp(-80f, 20f, sliderVolume);
+        audioMixer.SetFloat("SFXVolume", db);
     }
-
 }
 
 

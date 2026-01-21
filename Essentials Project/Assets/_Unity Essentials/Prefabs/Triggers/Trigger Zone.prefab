@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 138463328255518127}
   - component: {fileID: 7152623274336612078}
-  - component: {fileID: 1832510969284626011}
   m_Layer: 0
   m_Name: Trigger Zone
   m_TagString: Untagged
@@ -79,16 +78,3 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &1832510969284626011
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3428222640475308885}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1e64766b2f35537429799379e583531f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::TrigerrMessage
-  doorMessage: {fileID: 0}
