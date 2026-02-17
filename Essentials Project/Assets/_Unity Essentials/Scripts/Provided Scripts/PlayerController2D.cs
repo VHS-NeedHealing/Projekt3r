@@ -1,4 +1,6 @@
 using UnityEngine;
+using System.Collections;
+using System.Collections.Generic;
 
 public class PlayerController2D : MonoBehaviour
 {
@@ -10,6 +12,7 @@ public class PlayerController2D : MonoBehaviour
     private Rigidbody2D rb; // Reference to the Rigidbody2D component attached to the player
     private Vector2 movement; // Stores the direction of player movement
     private bool isMovingHorizontally = true; // Flag to track if the player is moving horizontally
+    public Animator animator;
 
     void Start()
     {
@@ -17,6 +20,7 @@ public class PlayerController2D : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         // Prevent the player from rotating
         rb.constraints = RigidbodyConstraints2D.FreezeRotation;
+
     }
 
     void Update()
@@ -30,8 +34,7 @@ public class PlayerController2D : MonoBehaviour
         {
             // Set movement direction based on input
             movement = new Vector2(horizontalInput, verticalInput);
-            // Optionally rotate the player based on movement direction
-            RotatePlayer(horizontalInput, verticalInput);
+
         }
         else
         {
@@ -39,40 +42,49 @@ public class PlayerController2D : MonoBehaviour
             if (horizontalInput != 0)
             {
                 isMovingHorizontally = true;
+
             }
             else if (verticalInput != 0)
             {
                 isMovingHorizontally = false;
-            }
 
-            // Set movement direction and optionally rotate the player
+            }
+            // Set movement direction
             if (isMovingHorizontally)
             {
                 movement = new Vector2(horizontalInput, 0);
-                RotatePlayer(horizontalInput, 0);
+
             }
             else
             {
                 movement = new Vector2(0, verticalInput);
-                RotatePlayer(0, verticalInput);
+
             }
         }
+
+        if (movement.magnitude > 0)
+        {
+            animator.SetBool("isRunning", true);
+
+        }
+        else
+        {
+            animator.SetBool("isRunning", false);
+        }
+
+
+
+
     }
 
     void FixedUpdate()
     {
         // Apply movement to the player in FixedUpdate for physics consistency
         rb.linearVelocity = movement * speed;
+
+
     }
 
-    void RotatePlayer(float x, float y)
-    {
-        // If there is no input, do not rotate the player
-        if (x == 0 && y == 0) return;
 
-        // Calculate the rotation angle based on input direction
-        float angle = Mathf.Atan2(y, x) * Mathf.Rad2Deg;
-        // Apply the rotation to the player
-        transform.rotation = Quaternion.Euler(0, 0, angle);
-    }
 }
+
