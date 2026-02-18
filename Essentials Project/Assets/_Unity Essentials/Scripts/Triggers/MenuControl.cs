@@ -2,25 +2,46 @@ using UnityEngine;
 using UnityEngine.Audio;
 using UnityEngine.SceneManagement;
 
-public class MenuControl : MonoBehaviour
+public class Menucontroller : MonoBehaviour
 {
     public AudioMixer audioMixer;
     private bool musicMuted = false;
     private bool SFXMuted = false;
     public GameObject menu;
     private bool isMenuActive = false;
+    // Scene.name;
+    Scene scene;
+
+    private void Start()
+    {
+        //scene = SceneManager.GetActiveScene();
+        scene = SceneManager.GetActiveScene();
+    }
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
-        {
-            isMenuActive = !isMenuActive;
-            menu.SetActive(isMenuActive);
-        }
+       
+            if (Input.GetKeyDown(KeyCode.P) && scene.name == "Paulina_scene")
+            {
+                isMenuActive = !isMenuActive;
+                menu.SetActive(isMenuActive);
+            }
     }
-    public void Restart()
+   
+    public void RestartPaulina()
+    {
+        SceneManager.LoadScene("Paulina_scene");
+        Debug.Log("restarted");
+    }
+    public void RestartHania()
     {
         SceneManager.LoadScene("Hania_scene");
+        Debug.Log("restarted");
+    }
+    public void RestartWiktoria()
+    {
+        SceneManager.LoadScene("Wiktoria_scene");
+        Debug.Log("restarted");
     }
     public void QuitGame()
     {
@@ -32,6 +53,7 @@ public class MenuControl : MonoBehaviour
         if (musicMuted)
         {
             audioMixer.SetFloat("MusicVolume", -80f);
+            Debug.Log("mute_music");
         }
         else
         {
