@@ -21,7 +21,7 @@ public class Menucontroller : MonoBehaviour
     private void Update()
     {
        
-            if (Input.GetKeyDown(KeyCode.P) && scene.name == "Paulina_scene")
+            if (Input.GetKeyDown(KeyCode.P) && scene.name == "1_Paulina_scene")
             {
                 isMenuActive = !isMenuActive;
                 menu.SetActive(isMenuActive);
@@ -30,22 +30,22 @@ public class Menucontroller : MonoBehaviour
    
     public void RestartPaulina()
     {
-        SceneManager.LoadScene("Paulina_scene");
+        SceneManager.LoadScene("1_Paulina_scene");
         Debug.Log("restarted");
     }
     public void RestartHania()
     {
-        SceneManager.LoadScene("Hania_scene");
+        SceneManager.LoadScene("2_Hania_scene");
         Debug.Log("restarted");
     }
     public void RestartWiktoria()
     {
-        SceneManager.LoadScene("Wiktoria_scene");
+        SceneManager.LoadScene("3_Wiktoria_scene");
         Debug.Log("restarted");
     }
     public void QuitGame()
     {
-        Application.Quit();
+        SceneManager.LoadScene("_MainMenu_Scene");
     }
     public void ButtonMusicMute()
     {
